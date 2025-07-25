@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 9%, 18%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 6%, 25%);
+  --muted-foreground: hsl(215, 4%, 65%);
+  --popover: hsl(210, 9%, 18%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 6%, 23%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(215, 6%, 30%);
+  --input: hsl(215, 6%, 30%);
+  --primary: hsl(46, 85%, 58%);
+  --primary-foreground: hsl(210, 9%, 18%);
+  --secondary: hsl(210, 6%, 25%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(210, 6%, 25%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(46, 85%, 58%);
+  --radius: 0.5rem;
+  
+  /* Brand colors */
+  --charcoal: hsl(210, 9%, 18%);
+  --gold: hsl(46, 85%, 58%);
+  --light-gray: hsl(0, 0%, 90%);
+  --medium-gray: hsl(215, 4%, 65%);
+}
+
+.dark {
+  --background: hsl(210, 9%, 18%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 6%, 25%);
+  --muted-foreground: hsl(215, 4%, 65%);
+  --popover: hsl(210, 9%, 18%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 6%, 23%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(215, 6%, 30%);
+  --input: hsl(215, 6%, 30%);
+  --primary: hsl(46, 85%, 58%);
+  --primary-foreground: hsl(210, 9%, 18%);
+  --secondary: hsl(210, 6%, 25%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(210, 6%, 25%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(46, 85%, 58%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-color: var(--charcoal);
+    color: var(--foreground);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .text-gold {
+    color: var(--gold);
+  }
+  
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+  
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  
+  .text-light-gray {
+    color: var(--light-gray);
+  }
+  
+  .text-medium-gray {
+    color: var(--medium-gray);
+  }
+  
+  .border-gold {
+    border-color: var(--gold);
+  }
+  
+  .hover\:bg-gold:hover {
+    background-color: var(--gold);
+  }
+  
+  .hover\:text-gold:hover {
+    color: var(--gold);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(46, 85%, 50%);
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hero section overlay */
+.hero-overlay {
+  background: linear-gradient(rgba(45, 45, 45, 0.6), rgba(45, 45, 45, 0.6));
+}
+
+/* Glassmorphism effect for navigation */
+.nav-glass {
+  background: rgba(45, 45, 45, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
