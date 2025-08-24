@@ -26,7 +26,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-overlay"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`
+            backgroundImage: `url('https://i.pinimg.com/736x/05/35/b1/0535b18122f910a8eeecc3d30d6f1b89.jpg')`
           }}
         />
         
